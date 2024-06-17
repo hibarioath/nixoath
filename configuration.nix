@@ -80,6 +80,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
 packages = with pkgs; [
 #alacritty
+ani-cli
 #base16-schemes
 fastfetch
 flatpak
@@ -92,6 +93,7 @@ git
 gradience
 htop
 keepassxc
+kiwix
 librewolf
 nerdfonts
 noto-fonts-cjk-serif
@@ -112,7 +114,8 @@ wget
 # Virt-manager
 virtualisation.libvirtd.enable = false;
 programs.virt-manager.enable = false;
-
+virtualisation.virtualbox.host.enable = false;
+virtualisation.virtualbox.host.enableExtensionPack = false;
 # Activar el servicio de flatpak.
 services.flatpak.enable = true;
 
